@@ -1,0 +1,33 @@
+<h1>URL Shortener</h1>
+<form action="/shorturls" method="post" class="my-4 form-inline">
+
+    <label for="fullUrl" class="sr-only"></label>
+    <input style="margin-bottom:9px" placeholder="Please Enter the Url" type="url" name="fullUrl" id="fullUrl" class="form-control col mr-2" required>
+    <button type="submit" class="btn btn-success">Shorten</button>
+</form>
+
+<table class="table table-stripped table-responsive">
+    <thead>
+        <tr>
+            <th>Full Url</th>
+            <th>Shortened Url</th>
+            <th>Clicks</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each shortUrls}}
+
+                <tr>
+                    <td><a href="{{this.full}}">{{this.full}}</a></td>
+                    <td><a href="{{this.short}}">{{this.short}}</a></td>
+                    <td>{{this.clicks}}</td>
+                </tr>
+
+
+
+        {{/each}}
+    </tbody>
+
+
+
+</table>
