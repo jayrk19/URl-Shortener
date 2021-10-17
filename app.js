@@ -6,11 +6,7 @@ const ShortUrl = require('./models/shorturl')
 const port = process.env.PORT || 3000;
 
 mongoose.connect(
-  "mongodb+srv://jrk:Ramkamesh01@cluster0.ngoio.mongodb.net/urlshortener?retryWrites=true&w=majority",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
+  "mongodb+srv://jrk:Ramkamesh01@cluster0.ngoio.mongodb.net/urlshortener?retryWrites=true&w=majority"
 );
 
 
