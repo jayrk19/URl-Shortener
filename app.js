@@ -5,9 +5,16 @@ const app = express();
 const ShortUrl = require('./models/shorturl')
 const port = process.env.PORT || 3000;
 
-mongoose.connect(
-  "mongodb+srv://jrk:Ramkamesh01@cluster0.ngoio.mongodb.net/urlshortener?retryWrites=true&w=majority"
-);
+
+
+const MONGODB_URI =
+  "mongodb+srv://test:test123@urlshortner.tbw6o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+mongoose.connect(MONGODB_URI || "mongodb://localhost/urlshortnener", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 
 
 
